@@ -8,8 +8,6 @@ public class SecondArrayTask {
      * @return общий размер нового массива
      */
     public static int fullSize(int[] firstArray, int[] secondArray) {
-        int[] resultArray = new int[firstArray.length + secondArray.length];
-
-        return resultArray.length;
+        return firstArray.length + secondArray.length;
     }
 }
