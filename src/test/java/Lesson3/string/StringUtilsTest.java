@@ -27,4 +27,10 @@ public class StringUtilsTest {
 
         Assert.assertEquals(expected.getValue(), result.getValue());
     }
+
+    @Test
+    public void whenArrayIsNull() {
+
+        Assert.assertNull(StringUtils.getTheBiggestStringFromArray(null));
+    }
 }
