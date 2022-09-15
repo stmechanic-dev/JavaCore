@@ -1,5 +1,7 @@
 package Lesson3.classes.auto;
 
+import java.util.Objects;
+
 public class Auto {
     private String model;
     private String carBrand;
@@ -43,5 +45,18 @@ public class Auto {
 
     public void setTransmission(String transmission) {
         this.transmission = transmission;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Auto auto = (Auto) o;
+        return seats == auto.seats && Objects.equals(model, auto.model) && Objects.equals(carBrand, auto.carBrand) && Objects.equals(transmission, auto.transmission);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(model, carBrand, seats, transmission);
     }
 }
